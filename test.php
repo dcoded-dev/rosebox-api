@@ -1,2 +1,2 @@
 <?php
-echo $test_key . ' ' . $test_value;
+echo getenv($test_key) . ' ' . getenv($test_value);
