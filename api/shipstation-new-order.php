@@ -100,8 +100,8 @@ $debugInfo = [];
 
 if (isset($data['resource_url'])) {
     $auth = [
-        'username' => 'f8ffecb9734744618b22e6d396f6b926', // Your actual username
-        'password' => '10e00f8f195346bbb15cac85e20fbea9'  // Your actual password
+        'username' => getenv('shipstation_api_key'),
+        'password' => getenv('shipstation_api_secret'),
     ];
     $getResponse = makeCurlRequest('GET', $data['resource_url'], $auth, null, $debugInfo['GET']);
 
